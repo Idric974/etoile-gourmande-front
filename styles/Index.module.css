@@ -2,7 +2,16 @@
 .myForm,
 .inputBox,
 .formLabel,
-.formInput {
+.formInput,
+.saveurBox,
+.saveurContenerBox,
+.saveurContent,
+.saveurData,
+.saveurDataImage,
+.saveurDataText,
+.saveurQte,
+.saveurDataPrix,
+.saveurDataQte {
   /* height: 100vh; */
   /* border: solid red 1px; */
   width: 100%;
@@ -31,4 +40,84 @@
 .formInput {
   /* border: solid blue 1px; */
   padding-left: 10px;
+}
+
+/*********** Saveurs ***********/
+
+.saveurBox {
+  /* border: solid blue 1px; */
+  flex-direction: row;
+  margin: 10px 0px 10px 0px;
+  justify-content: space-around;
+}
+
+.saveurContenerBox {
+  /* border: solid red 1px; */
+  width: 98%;
+  flex-direction: column;
+}
+
+.saveurData {
+  border: solid var(--Primary) 2px;
+  border-radius: 10px;
+  padding: 10px 5px 10px 5px;
+}
+
+.saveurDataImageBox {
+  /* border: solid blue 1px; */
+  width: 100%;
+}
+
+.saveurDataImage {
+  /* border: solid blue 1px; */
+  width: 100%;
+  border-radius: 10px;
+}
+
+.saveurDataTitle {
+  /* border: solid blue 1px; */
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left;
+  padding: 5px 0px 5px 5px;
+}
+
+.saveurDataPrix,
+.saveurDataQte {
+  /* border: solid green 1px; */
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.saveurDataTextItem {
+  /* border: solid red 1px; */
+  text-align: left;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 5px 0px 5px 5px;
+}
+
+.saveurDataTextNumber {
+  /* border: solid green 1px; */
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.saveurDataQteText {
+  /* border: solid red 1px; */
+  text-align: left;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 5px 0px 5px 5px;
+}
+
+.saveurDataQteNumber {
+  /* border: solid green 1px; */
+  width: 30%;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-left: 10px;
 }

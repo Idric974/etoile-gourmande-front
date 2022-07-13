@@ -318,6 +318,11 @@ input[type='date']::-webkit-calendar-picker-indicator {
   border-radius: 100%;
 }
 
+input[type='checkbox'] {
+  background-color: red;
+  border: red;
+}
+
 select {
   width: 50%;
   height: 80px;
