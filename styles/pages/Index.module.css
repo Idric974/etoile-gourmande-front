@@ -20,10 +20,6 @@
   align-items: center;
 }
 
-.myForm {
-  /* border: solid red 1px; */
-}
-
 .inputBox {
   /* border: solid red 1px; */
   margin-bottom: 15px;
@@ -60,18 +56,19 @@
 .saveurData {
   border: solid var(--Primary) 2px;
   border-radius: 10px;
-  padding: 10px 5px 10px 5px;
+  padding: 0px 0px 0px 0px;
 }
 
 .saveurDataImageBox {
   /* border: solid blue 1px; */
   width: 100%;
+  margin-bottom: 10px;
 }
 
 .saveurDataImage {
   /* border: solid blue 1px; */
   width: 100%;
-  border-radius: 10px;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .saveurDataTitle {
@@ -121,4 +118,17 @@
   font-size: 1.2rem;
   font-weight: bold;
   margin-left: 10px;
+}
+
+.myCheckboxBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+
+.myCheckbox {
+  border: solid red 3px;
 }

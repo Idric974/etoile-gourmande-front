@@ -1,7 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
-import styles from '../styles/Index.module.css';
+import styles from '../styles/pages/Index.module.css';
 
 export default function Home() {
+  let addToCart = (e) => {
+    e.preventDefault();
+
+    console.log('Checkbox stat : ');
+  };
+
   return (
     <div className={styles.box}>
       <form className={styles.myForm}>
@@ -219,11 +225,16 @@ export default function Home() {
                   alt={''}
                 />
               </div>
-              <div className={styles.saveurDataTitle}>{'Mangue-Passion'}</div>
+              <div className={styles.saveurDataTitle} id="mangue-passion-Id">
+                {'Mangue-Passion'}
+              </div>
 
               <div className={styles.saveurDataPrix}>
                 <div className={styles.saveurDataTextItem}>{'Prix : '}</div>
-                <div className={styles.saveurDataTextNumber}>
+                <div
+                  className={styles.saveurDataTextNumber}
+                  id="mangue-passion-Prix"
+                >
                   {'10.50'}
                   {' €'}
                 </div>
@@ -237,10 +248,13 @@ export default function Home() {
                   className={styles.saveurDataQteNumber}
                   type="number"
                   step="1"
+                  id='id="mangue-passion-Qte"'
                 ></input>
               </div>
 
-              <button>Ajouter au panier</button>
+              <div className={styles.myCheckboxBox}>
+                <button onClick={addToCart}>Ajouter à mon panier</button>
+              </div>
             </div>
           </div>
         </div>
