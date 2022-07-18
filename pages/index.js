@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import styles from '../styles/pages/Index.module.css';
+import ThreadProducts from '../src/Products/ThreadProducts';
 
 export default function Home() {
   let addToCart = (e) => {
@@ -184,6 +185,10 @@ export default function Home() {
           </select>
         </div>
 
+        <div className={styles.saveurBox}>
+          <ThreadProducts></ThreadProducts>
+        </div>
+
         <div className={styles.inputBox}>
           <label className={styles.formLabel}>
             {'Couleurs du glaçage (Si thème à respecter)'}
@@ -206,57 +211,6 @@ export default function Home() {
             rows="4"
             cols="50"
           ></textarea>
-        </div>
-
-        <div className={styles.saveurBox}>
-          {/* Bloc Saveurs */}
-
-          <div className={styles.saveurContenerBox}>
-            <div className={styles.saveurImage}></div>
-
-            <div className={styles.saveurData}>
-              <div className={styles.saveurDataImageBox}>
-                {' '}
-                <img
-                  className={styles.saveurDataImage}
-                  src={
-                    'https://cdn.shopify.com/s/files/1/0112/0396/9086/files/Copie_de_Actus_de_la_semaine_480x480.png?v=1644513451'
-                  }
-                  alt={''}
-                />
-              </div>
-              <div className={styles.saveurDataTitle} id="mangue-passion-Id">
-                {'Mangue-Passion'}
-              </div>
-
-              <div className={styles.saveurDataPrix}>
-                <div className={styles.saveurDataTextItem}>{'Prix : '}</div>
-                <div
-                  className={styles.saveurDataTextNumber}
-                  id="mangue-passion-Prix"
-                >
-                  {'10.50'}
-                  {' €'}
-                </div>
-              </div>
-
-              <div className={styles.saveurDataQte}>
-                <div className={styles.saveurDataQteText}>
-                  {'Lot de 10 unités : '}
-                </div>
-                <input
-                  className={styles.saveurDataQteNumber}
-                  type="number"
-                  step="1"
-                  id='id="mangue-passion-Qte"'
-                ></input>
-              </div>
-
-              <div className={styles.myCheckboxBox}>
-                <button onClick={addToCart}>Ajouter à mon panier</button>
-              </div>
-            </div>
-          </div>
         </div>
       </form>
     </div>
