@@ -1,4 +1,5 @@
 .box,
+.title,
 .myForm,
 .inputBox,
 .formLabel,
@@ -20,9 +21,18 @@
   align-items: center;
 }
 
+.title {
+  flex-direction: row;
+  justify-items: flex-start;
+  padding: 10px 0px 20px 10px;
+  font-size: 2rem;
+  color: var(--bgColor);
+}
+
 .inputBox {
   /* border: solid red 1px; */
   margin-bottom: 15px;
+  text-align: left;
 }
 
 .formLabel {

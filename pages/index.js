@@ -13,6 +13,8 @@ export default function Home() {
     <div className={styles.box}>
       <form className={styles.myForm}>
         <div className={styles.inputBox}>
+          <p className={styles.title}>Vos coordonnées</p>
+
           <label className={styles.formLabel}>Prénom</label>
           <input
             className={styles.formInput}
@@ -139,23 +141,10 @@ export default function Home() {
           ></input>
         </div>
 
-        <div className={styles.inputBox}>
-          <label className={styles.formLabel}>{'Embalage'} </label>
-          <select
-            className={styles.formInput}
-            type="select"
-            id="emballageId"
-            name="emballage"
-          >
-            <optgroup>
-              <option>{'Sélectionnez votre emballage'}</option>
-              <option value="0.00">{'Box à partager (OFFERTE)'}</option>
-              <option value="1.50">{'Option Sachet à offrir 1,50€'}</option>
-              <option value="2.50">
-                {'Option Box à offrir à partir de 2,50€'}
-              </option>
-            </optgroup>
-          </select>
+        <p className={styles.title}>Votre commande</p>
+
+        <div className={styles.saveurBox}>
+          <ThreadProducts></ThreadProducts>
         </div>
 
         <div className={styles.inputBox}>
@@ -183,10 +172,6 @@ export default function Home() {
               </option>
             </optgroup>
           </select>
-        </div>
-
-        <div className={styles.saveurBox}>
-          <ThreadProducts></ThreadProducts>
         </div>
 
         <div className={styles.inputBox}>

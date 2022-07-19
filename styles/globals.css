@@ -7,8 +7,7 @@
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   --bgColor: #373964;
   --Primary: #f3a78f;
-  --Secondary: #f44611;
-  --grisClaire: #f5e9e2;
+  --Secondary: #f1f1f1;
   --Noire: #040f16;
   --police: @import
     url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
@@ -213,15 +212,18 @@ Link {
 /**➖➖➖➖➖ Input ➖➖➖➖➖**/
 
 button {
-  width: 90%;
+  width: 98%;
   height: 50px;
   border-radius: 5px;
+  border: none;
   cursor: pointer;
   text-align: center;
   font-size: 1.5rem;
+  font-weight: bold;
   margin: 20px 0px 10px 0px;
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
-    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+  background-color: var(--Secondary);
+  box-shadow: var(--Primary) 0px 0px 0px 1px,
+    rgba(6, 24, 44, 0.65) 0px 5px 6px 0px,
     rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
@@ -327,19 +329,23 @@ input[type='number'] {
   width: 98%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: flex-start;
   box-sizing: border-box;
   border: none;
-  border-bottom: solid 1px black;
+  border: solid 1px var(--Primary);
+  border-radius: 10px;
   font-size: 16px;
   text-align: left;
   font-size: 1.5rem;
   padding-top: 10px;
+  text-align: center;
 }
 
 input[type='number']:hover {
   border: none;
-  border-bottom: solid 1px var(--Primary);
+  border: solid 2px var(--Primary);
+  border-radius: 10px;
 }
 
 input[type='number']:focus {
@@ -348,7 +354,8 @@ input[type='number']:focus {
   align-items: flex-start;
   width: 98%;
   border: none;
-  border-bottom: solid 1px var(--Primary);
+  border: solid 2px var(--Primary);
+  border-radius: 10px;
   outline: none;
 }
 
@@ -369,14 +376,13 @@ input[type='file'] {
 }
 
 select {
-  width: 50%;
+  width: 100%;
   height: 80px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   box-sizing: border-box;
-  border: none;
-  border-bottom: solid black 1px;
+  border: solid 1px var(--Primary);
   border-radius: 4px;
   text-align: left;
   font-size: 1.5rem;
@@ -385,13 +391,25 @@ select {
 }
 
 select:hover {
-  border: none;
-  border-bottom: solid 1px var(--Primary);
+  border: solid 1px var(--Primary);
+}
+
+select:focus {
+  border: solid 1px var(--Primary);
 }
 
 optgroup {
   font-size: 0.9rem;
   width: 50%;
+}
+
+optgroup:focus {
+  border: none;
+  border-bottom: solid 1px var(--Primary);
+}
+
+optgroup:hover {
+  border: solid 1px var(--Primary);
 }
 
 /**➖➖➖➖➖➖➖➖➖➖➖➖**/
