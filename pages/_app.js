@@ -8,6 +8,7 @@ import { Provider } from 'react-redux';
 import { applyMiddleware } from 'redux';
 import { legacy_createStore as createStore } from 'redux';
 import { config } from '@fortawesome/fontawesome-svg-core';
+import Layout from '../components/Layout';
 
 config.autoAddCss = false;
 
@@ -42,12 +43,14 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Provider store={store}>
-        <Head>
-          <title>Docaz.re</title>
-          <meta name="description" content="Trouvez vos gourmandise" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <Component {...pageProps} />
+        <Layout>
+          <Head>
+            <title>Docaz.re</title>
+            <meta name="description" content="Trouvez vos gourmandise" />
+            <link rel="icon" href="/favicon.ico" />
+          </Head>
+          <Component {...pageProps} />
+        </Layout>
       </Provider>
     </>
   );
