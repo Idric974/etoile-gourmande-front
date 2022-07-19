@@ -9,6 +9,7 @@
 .saveurDataPrix,
 .saveurDataQte,
 .saveurDataEmaballage,
+.saveurDataEmaballageVisu,
 .addToCardButtonBox {
   /* height: 300px; */
   /* border: solid red 1px; */
@@ -120,11 +121,13 @@
   /* border: solid red 2px; */
 }
 
-.addToCardButtonBox {
-  /* border: solid red 2px; */
-  border-radius: 0px 0px 10px 10px;
+.saveurImageVisu {
+  width: 100%;
+  /* border: solid blue 2px; */
 }
 
-.addToCardButton {
+.addToCardButtonBox {
   /* border: solid red 2px; */
+  margin-top: 20px;
+  border-radius: 0px 0px 10px 10px;
 }

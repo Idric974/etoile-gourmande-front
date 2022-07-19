@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @next/next/no-img-element */
 import styles from '../../styles/components/Card.module.css';
 import React, { useEffect, useState } from 'react';
@@ -17,6 +18,33 @@ const Card = ({ post }) => {
   // console.log('🔺 POST DATA 🔺 ', doc);
 
   const [isLoading, setIsLoading] = useState(false);
+
+  //! Affichage de l'iamge de l'emballage.
+
+  const [emballage, setEmballage] = useState('');
+  const [imageEmballage, setImageEmballage] = useState('');
+
+  let emballageImage;
+
+  useEffect(() => {
+    if (emballage == 'Sélectionnez votre emballage') {
+      return;
+    } else if (emballage == '0') {
+      setImageEmballage(
+        'https://firebasestorage.googleapis.com/v0/b/l-etoile-a-gourmandise.appspot.com/o/images%2FEmballage%2Femballage_1.jpg?alt=media&token=fc887128-98af-43bc-b7b3-d53daf1a71e5'
+      );
+    } else if (emballage == '1.5') {
+      setImageEmballage(
+        'https://firebasestorage.googleapis.com/v0/b/l-etoile-a-gourmandise.appspot.com/o/images%2FEmballage%2Femballage_2.jpg?alt=media&token=4ab053d6-97c2-4622-b4ad-bc3626170831'
+      );
+    } else if (emballage == '2.5') {
+      setImageEmballage(
+        'https://firebasestorage.googleapis.com/v0/b/l-etoile-a-gourmandise.appspot.com/o/images%2FEmballage%2Femballage_3.jpg?alt=media&token=16adfbd6-8fd2-4d90-98c3-1e8277318a8b'
+      );
+    }
+  }, [emballage]);
+
+  //! --------------------------------------------------
 
   //! Le profil de l'auteur du post.
 
@@ -93,18 +121,26 @@ const Card = ({ post }) => {
                   type="select"
                   id="emballageId"
                   name="emballage"
+                  onChange={(e) => setEmballage(e.target.value)}
                 >
                   <optgroup>
                     <option>{'Sélectionnez votre emballage'}</option>
-                    <option value="0.00">{'Box à partager (OFFERTE)'}</option>
-                    <option value="1.50">
-                      {'Option Sachet à offrir 1,50€'}
-                    </option>
-                    <option value="2.50">
-                      {'Option Box à offrir à partir de 2,50€'}
+                    <option value="0">{'Box à partager (OFFERTE)'}</option>
+                    <option value="1.5">{'Sachet à offrir 1,50€'}</option>
+                    <option value="2.5">
+                      {'Box à offrir à partir de 2,50€'}
                     </option>
                   </optgroup>
                 </select>
+              </div>
+
+              <div className={styles.saveurDataEmaballageVisu}>
+                {' '}
+                <img
+                  className={styles.saveurImageVisu}
+                  src={imageEmballage}
+                  alt={''}
+                />
               </div>
 
               <div className={styles.addToCardButtonBox}>
